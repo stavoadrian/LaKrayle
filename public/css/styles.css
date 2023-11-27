@@ -1,0 +1,345 @@
+/*PALETA*/
+h{
+    color: #E63946;  /*SECUNDARIO*/  
+    color: #F1FAEE;
+    color: #A8DADC;
+    color: #457B9D; /*PRIMARIO*/
+    color: #1D3557; /*PRIMARIO OSCURO*/
+    color: aquamarine;
+}
+
+/* estilos comunes */
+
+*{                              /* esto es para que cuando nosotros modifiquemos el ancho y el alto de algun elemento no se este */
+    box-sizing: border-box;     /* contando lo que es el margen el padding como parte de ese elemento, que n ohaga la sumatoria de todo junto*/
+}
+
+body{
+    margin: 0;                                          /* que hace esto? bueno lo que hace esto es que la pagina cubra por completo*/
+    padding: 0;                                         /* la ventan del navegador y no me queden franjas blancas a los costados y la */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   /* parte de arriba y de abajo */
+    font-size: 16px;
+} 
+
+img{
+    border-radius:5px;
+}
+
+/*estilo crear index*/  /*lineas 58 a 64*/ /*===================================================================================*/
+
+.headerindex {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .headerindex {
+        display: block;
+    }
+}
+
+/* estilos carrusel */   /*lineas 36 a 56*/ /*===================================================================================*/
+
+#carouselExample img {
+    height: 20vw;      /* height: 30vw; */
+    width: 100%;        /* width: 40%; */
+}
+
+@media (max-width: 991px) {
+    #carouselExample {
+        display: none !important;
+    }
+}    
+
+/* estilos de header */ /*lineas 58 a la 64*/ /*===================================================================================*/
+
+header{
+    padding: 60px;
+    text-align: center;
+    background-image: url(../img/16.nombre.png);
+    background-repeat: no-repeat;                       /* esto es para que la imagen no se repita duplique */
+    background-size: cover;                             /* esto es para que la imagen me cubra todo el ancho del contenedor */
+}
+
+header div{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);              /* rgba nos va a permitir manejar con el 4to valor la transparecia de color */
+    background-image: linear-gradient(#1D3557);
+    color: rgb(240, 255, 241);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {                              /* usamos @media query para que sea responsive*/
+    header {
+        background-position: center;
+    }
+}
+/* estilos navbar boostrap*/  /*linease 15 a 34*/ /*===================================================================================*/
+.navbar{
+    background-color: gray !important;  /* declaracion se puede usar , pero no esta bien usarla*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+       .navbar-nav {                    /*menu se posiciona al medio*/
+           text-align: center;
+       }
+}
+
+.navbar-nav a:hover{                        /*cambia de color el boton*/
+    background-color:#1D3557;
+    color: #F1FAEE;
+}
+
+.navbar-brand img{              /*tamaño del icono*/
+    width: 75px;              
+    height: 75px;
+}
+
+/* estilos navbar que cambio a formnav */ /* Contacto */ /*index form *//*=============================================================*/
+.formnav{
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    position: sticky;                    /* esto es para que la barra de navegacion sea responsive junto con la query de la linea */ 
+    top: 0;                             /* con esto hacemos que la barra de navegacion se mantienen en la parte superior*/
+    border-style: inset outset;
+    border-width: 10px;
+    border-color: #e18547;
+}
+
+.formnav a{
+    color: #F1FAEE;
+    padding: 14px 20px;            /* esto lo que hace es aplicar 14px hacia arriba y abajoy 20px para los costados */
+    text-decoration: none;         /* none quita todo tipo de decoracion linas abajo tachado puntos ect*/
+}
+
+.formnav a:hover{   /*queremos q el enlace/boton cambie de color y lo hacemos con una seudoclase/keyword hover paramos el mouse arriba de algo */
+    background-color: #1D3557;
+}
+
+@media (max-width: 800px) {                              /* usamos @media query para que sea responsive*/
+    .formnav {
+        flex-direction: column;
+        position: unset;
+    }
+
+    .formnav a{
+        text-align: center;
+    }
+}
+
+/* estilo parte principal */ /*lineas 66 a 105*/ /*columna lado izquierdo historias*//*===========================================*/
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside{                                                 /*lineas 68 a 78*/  
+    flex-basis: 25%;  /* como minimo tiene q ocupar lo q Nos le decimos, 25% es del contendor padre q en este caso seria el div clase principal*/
+    padding: 20px;                       
+    background-color: #F1FAEE;
+    text-align: center;
+}
+
+main{                                                 /*lineas 79 a 104*/
+    flex-basis: 75%;
+    padding: 20px;
+    padding-left: 40px;
+    background-color: gray;
+}
+
+/*estilos card*/
+.card {
+    width: 100%;
+    margin-bottom: 50px;
+    border: #1D3557 solid 3px;
+    background-color: #F1FAEE;
+}
+
+.card-body a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    background-color: #457B9D !important;
+}
+
+.card-body a:hover {
+    background-color: #E63946 !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 40vw;
+     object-fit: cover ;
+}
+
+
+
+@media (max-width: 991px) {                              /* usamos @media query para que sea responsive*/
+    .principal{
+            flex-direction: column;                      /* al achicarse de pc a celular el txt se coloca como columna*/
+    }
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+
+.image:hover img{  /*queremos q el enlace/boton cambie de tamaño y lo hacemos con una seudoclase/keyword hover paramos el mouse arriba de algo */
+    transform: scale(1.07);
+}
+
+
+.asidetitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: solid;
+}
+
+@media (max-width: 800px) {                              /* usamos @media query para que sea responsive*/
+    .image img {
+            width: 60%;                      /* al achicarse de pc a celular el txt se coloca como columna*/
+            height: auto;
+    }
+}
+
+
+/* estilo footer */
+
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: #F1FAEE;
+}
+
+/* estilo formulario */
+
+form{
+    padding: 123px;
+    background-color: gray;
+    border: 5px outset #e18547;
+}
+
+label{
+    background-color: #e18247;
+    color: #F1FAEE;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+fieldset{
+    display: grid;
+    grid-template-columns: 30vw 20vw;
+    gap: 10px;
+    margin: auto;
+    width: fit-content;
+    font-size: 1.2rem;
+    border: 5px double #e18547;
+    text-align: center;
+}
+
+legend{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+}
+
+@media (max-width:600px) {
+     fieldset {
+        display: flex;
+        flex-direction: column;
+     }
+}
+
+                                                 
+                                                                            
+.grid-container {
+    display: grid;
+    background-color: white;
+    gap: 5px;                        /*espaciado para las brecha de filas y columnas */
+    border: 5px solid whitesmoke;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-container div {
+    background-color: gray;
+    color: white;
+    border: 2px solid black;
+    padding: 40px;
+    text-align: center;
+}
+
+.item1  {grid-column: 1 / 4 span;}               /*va de la linea de columna X (GCS y GCE) y termina en la linea de columna C*/
+.fechas {grid-column: 2 / 4;}
+.fechap {grid-column: 4 / 4;}
+.dia    {grid-column: 4 / 4;}
+.donde  {grid-column: 4 / 4;}
+.loca   {grid-column: 4 / 4;}
+.fondo  {background-color: gray;}
+
+
+@media (max-width: 460px) {                              /* usamos @media query para que sea responsive*/
+    .grid-container {                                    /* al achicarse de pc a celular el txt se coloca como columna*/
+            width: auto;                      
+            height: auto;
+    }
+}
+
+section{
+    display: flex;
+    width: auto;
+    height: 620px;
+}
+
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 8;
+    transition: 1s ease;
+}
+
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+@media (max-width: 991px) {                              /* usamos @media query para que sea responsive*/
+    .section {                                    /* al achicarse de pc a celular el txt se coloca como columna*/
+            width: auto;                      
+            height: auto;
+    }
+}
+
+.container{
+    background-color: gray;
+    flex-basis: 100%;
+       
+}
+
+.card-top{
+    width: 520px;
+    height: 500px;
+    
+}
+
+@media (max-width: 800px) {                             
+    .container {
+        flex-direction: column; 
+        width: auto;                      
+        height: auto;
+    }
+}
+
+   
+
