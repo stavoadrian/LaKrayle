@@ -108,6 +108,7 @@ header div{
     border-style: inset outset;
     border-width: 10px;
     border-color: #e18547;
+    z-index: 1;                          /*se agrega zindex para que la barra quede fija al scrollear*/
 }
 
 .formnav a{
@@ -296,7 +297,8 @@ legend{
 section{
     display: flex;
     width: auto;
-    height: 620px;
+    /*height: 620px;*/
+    height: 70vh;    
 }
 
 section img{
@@ -328,18 +330,24 @@ section img:hover{
 }
 
 .card-top{
-    width: 520px;
+    width: 610px;
     height: 500px;
-    
+}
+
+
+.container:hover .card-top{                      /*queremos q el enlace/boton cambie de tamaño y lo hacemos con una seudoclase/keyword hover*/ 
+    transform: scale(0.90);                       /* paramos el mouse arriba de la imagen */
 }
 
 @media (max-width: 800px) {                             
-    .container {
+    .container .card-top{
         flex-direction: column; 
         width: auto;                      
         height: auto;
     }
 }
+
+/*silviapampin53@hotmail.com*/
 
    
 
