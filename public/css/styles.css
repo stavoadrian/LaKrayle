@@ -235,6 +235,16 @@ label{
     border-radius: 10px;
 }
 
+barr{
+    display: grid;
+    color: #39e65f;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;    
+} 
+
 fieldset{
     display: grid;
     grid-template-columns: 30vw 20vw;
@@ -258,6 +268,11 @@ legend{
         display: flex;
         flex-direction: column;
      }
+     barr{
+        display: flex;
+        flex-direction: column;
+     }
+
 }
 
                                                  
